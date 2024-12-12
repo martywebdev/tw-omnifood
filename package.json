@@ -1,0 +1,22 @@
+{
+  "name": "tw-omnifood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss src/css/tailwind.css -o dist/css/styles.css --env production && cp -r src/*.html dist/ && sed -i 's|href=\"../dist/css/styles.css\"|href=\"./css/styles.css\"|' dist/*.html && cp -r src/js dist/",
+    "dev": "npx postcss src/css/tailwind.css -o dist/css/styles.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16"
+  },
+  "dependencies": {
+    "postcss-cli": "^11.0.0"
+  }
+}
