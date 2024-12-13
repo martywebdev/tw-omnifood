@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omnifood &mdash; Never cook again</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../dist/css/styles.css">
 </head>
 <body>
-    <h1 class="bg-red-500">Hello World</h1>
+    <header class="flex justify-between items-center h-24 px-12 relative">
+        <a href="#">
+          <img src="./img/omnifood-logo.png" alt="Omnifood Logo" class="h-[22px]"/>
+        </a>
+        <nav >
+          <ul class="flex items-center gap-12">
+            <li><a href="#how" class="font-medium inline-block">How it works</a></li>
+            <li><a href="#meals" class="font-medium inline-block">Meals</a></li>
+            <li>
+              <a href="#testimonials" class="font-medium inline-block">Testimonials</a>
+            </li>
+            <li><a href="#pricing" class="font-medium inline-block">Pricing</a></li>
+            <li><a href="#cta" class="font-medium inline-block">Try for free</a></li>
+          </ul>
+        </nav>
+  
+        <button class="block sm:hidden">
+          <ion-icon name="menu-outline"></ion-icon>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+    </header>
 </body>
 </html>
