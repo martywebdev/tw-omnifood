@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omnifood &mdash; Never cook again</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../dist/css/styles.css" />
+  </head>
+  <body class="">
+    <section class="p-4 m-3">
+      <div class="text-2xl p-4 border-4 border-red-300 mb-2">
+        <h3 class="uppercase font-bold font-3xl mb-3 text-red-500">Solid</h3>
+
+        <div class="h-16 w-64 m-2 bg-cyan-500"></div>
+        <div class="h-16 w-64 m-2 bg-cyan-300"></div>
+        <div class="h-16 w-64 m-2 bg-yellow-500"></div>
+        <div class="h-16 w-64 m-2 bg-yellow-700/25"></div>
+      </div>
+
+      <div class="text-2xl p-4 border-4 border-red-300 mb-2">
+        <h3 class="uppercase font-bold font-3xl mb-3 text-red-500">Gradient</h3>
+
+        <div
+          class="h-16 w-64 m-2 bg-gradient-to-r to-cyan-200 from-cyan-600"
+        ></div>
+        <div
+          class="h-16 w-64 m-2 bg-gradient-to-b to-cyan-200 from-cyan-600"
+        ></div>
+        <div
+          class="h-16 w-64 m-2 bg-gradient-to-bl to-cyan-200 from-cyan-600"
+        ></div>
+        <div
+          class="h-16 w-64 m-2 bg-gradient-to-r to-cyan-200 from-cyan-600"
+        ></div>
+        <div
+          class="h-16 w-64 m-2 bg-gradient-to-r to-cyan-200 via-green-500 from-cyan-600"
+        >
+          Via
+        </div>
+        <div
+          class="h-16 w-64 m-2 bg-gradient-to-r to-cyan-200 to-40% via-green-500 via-30% from-cyan-600 from-10%"
+        >
+          percentage
+        </div>
+      </div>
+    </section>
+    <section class="mx-auto w-5/6">
+      <select name="bg-position" class="my-4" id="bg-position">
+        <option value="bg-right">bg-right</option>
+        <option value="bg-right-top">bg-right-top</option>
+        <option value="bg-right-bottom">bg-right-bottom</option>
+        <option value="bg-left-bottom">bg-left-bottom</option>
+        <option value="bg-left-top">bg-left-top</option>
+        <option value="bg-center">center</option>
+        <option value="bg-contain">contain</option>
+        <option value="bg-cover">bg-cover</option>
+      </select>
+      <div
+        id="background-div"
+        class="bg-[url('/src/img/eating.jpg')] h-[1200px] w-[1200px] border-4 border-blue-600 bg-no-repeat"
+      ></div>
+    </section>
+  </body>
+  <script>
+    const select = document.getElementById("bg-position");
+    const backgroundDiv = document.getElementById("background-div");
+
+    select.addEventListener("change", (event) => {
+      const selectedClass = event.target.value;
+
+      // Remove all bg-position classes from the div
+      backgroundDiv.classList.remove(
+        "bg-right",
+        "bg-right-top",
+        "bg-right-bottom",
+        "bg-left-bottom",
+        "bg-left-top",
+        "bg-center",
+        "bg-contain",
+        "bg-cover"
+      );
+
+      // Add the selected class
+      backgroundDiv.classList.add(selectedClass);
+    });
+  </script>
+</html>
